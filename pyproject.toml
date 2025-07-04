@@ -1,0 +1,13 @@
+[project]
+name = "telepeek"
+version = "0.1.0"
+authors = [{name = "Ilia Sukhorukov", email = "dexoon@gmail.com"}]
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "fastapi>=0.115.14",
+    "telethon>=1.40.0",
+    "uvicorn>=0.35.0",
+]
