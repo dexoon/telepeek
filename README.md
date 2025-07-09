@@ -13,7 +13,7 @@ A FastAPI-based REST API that provides user information from Telegram usernames.
 
 ### Get User Information
 ```
-GET /{username}
+GET /user/{username}
 ```
 
 **Parameters:**
@@ -71,7 +71,6 @@ PORT=80  # Optional, defaults to 80
 
 ### 3. Installation
 
-#### Using uv (Recommended)
 ```bash
 # Install uv if you haven't already
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -81,15 +80,6 @@ uv sync
 
 # Run the application
 uv run python main.py
-```
-
-#### Using pip
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the application
-python main.py
 ```
 
 ### 4. Docker Deployment
@@ -164,20 +154,19 @@ The API provides comprehensive error handling:
 telepeek/
 ├── main.py              # FastAPI application
 ├── pyproject.toml       # Project dependencies
-├── uv.lock             # Locked dependencies
-├── Dockerfile          # Docker configuration
-├── docker-compose.yml  # Docker Compose setup
-├── .dockerignore       # Docker ignore rules
-└── README.md           # This file
+├── uv.lock              # Locked dependencies
+├── Dockerfile           # Docker configuration
+├── .dockerignore        # Docker ignore rules
+└── README.md            # This file
 ```
 
 ### Running in Development Mode
 ```bash
-# Install development dependencies
-uv sync --dev
+# Install dependencies
+uv sync
 
 # Run with auto-reload
-uv run python main.py
+uv run python main.py --reload
 ```
 
 ## Security Considerations
